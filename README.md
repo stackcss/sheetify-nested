@@ -4,6 +4,30 @@
 
 Sheetify plugin to unwrap nested rules.
 
+```
+// in.js
+var css = require('sheetify')
+
+css`
+  :host {
+    .input {
+      color: blue;
+    }
+    .button {
+      &:hover, &:focus {}
+    }
+  }
+`
+```
+
+```
+/* out.css */
+._5e252abd .input {
+    color: blue;
+}
+._5e252abd .button:hover,._5e252abd .button:focus {}
+```
+
 ## Command line
 ```sh
 $ browserify ./test/in.js -t [ sheetify/transform -u sheetify-nested ]
