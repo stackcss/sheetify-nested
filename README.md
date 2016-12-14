@@ -4,7 +4,7 @@
 
 Sheetify plugin to unwrap nested rules.
 
-```
+```js
 // in.js
 var css = require('sheetify')
 
@@ -20,7 +20,7 @@ css`
 `
 ```
 
-```
+```css
 /* out.css */
 ._5e252abd .input {
     color: blue;
