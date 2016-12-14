@@ -4,15 +4,19 @@
 
 Sheetify plugin to unwrap nested rules.
 
-## Usage
-```js
-const sheetifyNested = require('sheetify-nested')
-
-sheetifyNested()
+## Command line
+```sh
+$ browserify ./test/in.js -t [ sheetify/transform -u sheetify-nested ]
 ```
 
-## API
-### sheetifyNested
+## JS api
+```js
+const browserify = require('browserify')
+
+browserify()
+  .transform('sheetify/transform', { use: [ 'sheetify-nested' ] })
+  .bundle()
+```
 
 ## Installation
 ```sh
