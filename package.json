@@ -1,0 +1,32 @@
+{
+  "name": "sheetify-nested",
+  "version": "1.0.0",
+  "description": "Sheetify plugin to unwrap nested rules",
+  "main": "index.js",
+  "scripts": {
+    "deps": "dependency-check . && dependency-check . --extra --no-dev",
+    "test": "standard && npm run deps && NODE_ENV=test node test",
+    "test:cov": "standard && npm run deps && NODE_ENV=test istanbul cover test"
+  },
+  "repository": "stackcss/sheetify-nested",
+  "keywords": [
+    "sheetify",
+    "nest",
+    "indent"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "postcss": "^5.2.6",
+    "postcss-nested": "^1.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "concat-stream": "^1.5.2",
+    "css-extract": "^1.2.0",
+    "dependency-check": "^2.6.0",
+    "istanbul": "^0.4.5",
+    "sheetify": "^6.0.1",
+    "standard": "^8.6.0",
+    "tape": "^4.6.3"
+  }
+}
